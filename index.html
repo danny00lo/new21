@@ -40,8 +40,9 @@
   const counterworkId = sessionStorage.getItem("counterworkId");
   const pass = sessionStorage.getItem("pass");
   const code = sessionStorage.getItem("code");
+  const invitedUserId = sessionStorage.getItem("invitedUserId");
   new Mlink({
-    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code,//短链地址
+    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId,//短链地址
     button: document.querySelector('a#btnOpenApp')
   });
 
@@ -50,7 +51,7 @@
   let nonceStr = sessionStorage.getItem("nonceStr");
   let signature = sessionStorage.getItem("signature");
   let imgUrl = 'http://www.idothing.com/wxAct/images/logo_footer.png';
-  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code;
+  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId;
   $(function () {
     wx.config({
       appId: appId,
