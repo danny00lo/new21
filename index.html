@@ -41,6 +41,7 @@
   const pass = sessionStorage.getItem("pass");
   const code = sessionStorage.getItem("code");
   const invitedUserId = sessionStorage.getItem("invitedUserId");
+
   new Mlink({
     mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId,//短链地址
     button: document.querySelector('a#btnOpenApp')
