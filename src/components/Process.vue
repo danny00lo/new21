@@ -1,8 +1,13 @@
 <template>
   <div class="process">
-    <div class="top2">
-      <div class="box"></div>
-      <div class="content">参赛流程</div>
+    <!--<div class="top2">-->
+      <!--<div class="box"></div>-->
+      <!--<div class="content">参赛流程</div>-->
+    <!--</div>-->
+    <div class="title2">
+      <p>
+        参赛流程
+      </p>
     </div>
     <div class="step">
       <div class="start">{{startGame}}</div>
@@ -70,10 +75,25 @@
 <style lang="scss" scoped="">
   .process {
     background: #ffffff;
-    box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);
-    border-radius: 8px;
-    margin: 11px auto;
-    width: (341/375*100%);
+    /*box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);*/
+    /*border-radius: 8px;*/
+    margin: 0 auto;
+    width: (324/375*100%);
+    .title2{
+      background: #ffd207;
+      width: (126/324*100%);
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      padding: 10px 0;
+      font-size:14px;
+      color:#000000;
+      margin-bottom: 27px;
+      p{
+        margin-left: 26px;
+        font-size:14px;
+        color:#000000;
+      }
+    }
     .top2 {
       padding: 19px 0 25px 0;
       margin: 0 auto;
@@ -104,7 +124,7 @@
         left: (140/375*100%);
         top: 50px;
         font-size: 9px;
-        color: #00cc81;
+        color: #1e4df5;
         letter-spacing: -0.07px;
         display: flex;
         justify-content: center;
@@ -126,7 +146,7 @@
         left: (201/375*100%);
         top: 123px;
         font-size: 9px;
-        color: #00cc81;
+        color: #1e4df5;
         letter-spacing: -0.07px;
         display: flex;
         justify-content: center;
@@ -148,7 +168,7 @@
         left: (140/375*100%);
         top: 194px;
         font-size: 9px;
-        color: #00cc81;
+        color: #1e4df5;
         letter-spacing: -0.07px;
         display: flex;
         justify-content: center;
@@ -177,26 +197,26 @@
         font-size: 10px;
       }
       .box1 {
-        border: 2px solid #00cc81;
+        border: 2px solid #1e4df5;
         width: 0px;
         height: 30px;
         margin: 0 auto;
       }
       .box2 {
-        background: #00cc81;
+        background: #1e4df5;
         width: 6px;
         height: 6px;
         border-radius: 100%;
         margin: 2px auto;
       }
       .box3 {
-        border: 2px solid #00cc81;
+        border: 2px solid #1e4df5;
         width: 0px;
         height: 58px;
         margin: 0 auto;
       }
       .end {
-        background: #00cc81;
+        background: #1e4df5;
         border-radius: 2px;
         width: (66/375*100%);
         height: 20px;

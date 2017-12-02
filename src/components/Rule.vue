@@ -1,33 +1,72 @@
 <template>
   <div class="rule">
-    <div class="top2">
-      <div class="box"></div>
-      <div class="content">参与规则</div>
+    <!--<div class="top2">-->
+      <!--<div class="box"></div>-->
+      <!--<div class="content">参与规则</div>-->
+    <!--</div>-->
+    <div class="title2">
+      <p>
+        各名次团队奖金
+      </p>
     </div>
-    <p class="ruleContent">{{rule}}</p>
-    <div class="wxTips">
-      <p class="title">{{wxTips.title}}</p>
-      <p class="content">{{wxTips.content}}</p>
-      <div class="showWinPoint">
-        <ul class="up">
-          <li v-for='(item,index) in list'>
-            {{item}}
-          </li>
-        </ul>
-        <ul class="down">
-          <li v-for='(item,index) in list2'>
-            {{item}}
-          </li>
-        </ul>
-      </div>
+    <ul class="newRuleTable">
+      <li>
+        <div>
+          <p>第<span>1</span>名</p>
+          <p class="money">5000</p>
+        </div>
+        <div>
+          <p>第<span>2</span>名</p>
+          <p class="money">3000</p>
+        </div>
+        <div>
+          <p>第<span>3</span>名</p>
+          <p class="money">2000</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>第<span>04-10</span>名</p>
+          <p class="money">800</p>
+        </div>
+        <div>
+          <p>第<span>11-20</span>名</p>
+          <p class="money">300</p>
+        </div>
+        <div>
+          <p>第<span>21-40</span>名</p>
+          <p class="money">240</p>
+        </div>
+      </li>
+    </ul>
+    <div class="newRuleContent">
+      <p class="prize">每个赛区100支队伍，单个赛区前40名队伍均可获奖金</p>
+      <p class="prizeTip">奖金队员平分，比赛结束后48小时内发放</p>
     </div>
+    <!--<p class="ruleContent">{{rule}}</p>-->
+    <!--<div class="wxTips">-->
+      <!--<p class="title">{{wxTips.title}}</p>-->
+      <!--<p class="content">{{wxTips.content}}</p>-->
+      <!--<div class="showWinPoint">-->
+        <!--<ul class="up">-->
+          <!--<li v-for='(item,index) in list'>-->
+            <!--{{item}}-->
+          <!--</li>-->
+        <!--</ul>-->
+        <!--<ul class="down">-->
+          <!--<li v-for='(item,index) in list2'>-->
+            <!--{{item}}-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+    <footer>
+      {{footer}}
+    </footer>
     <div class="act" v-if="show == true">
       <div class="box"></div>
       <p class="text">{{activity}}</p>
     </div>
-    <footer>
-      {{footer}}
-    </footer>
   </div>
 </template>
 
@@ -117,10 +156,25 @@
 
   .rule {
     background: #ffffff;
-    box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);
-    border-radius: 8px;
-    margin: -35px auto 0 auto;
-    width: (341/375*100%);
+    /*box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);*/
+    /*border-radius: 8px;*/
+    margin: 0 auto;
+    width: (324/375*100%);
+    .title2{
+      background: #ffd207;
+      width: (187/324*100%);
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      padding: 10px 0;
+      font-size:14px;
+      color:#000000;
+      margin-bottom: 27px;
+      p{
+        margin-left: 26px;
+        font-size:14px;
+        color:#000000;
+      }
+    }
     .top2 {
       padding: 19px 0 15px 0;
       margin: 0 auto;
@@ -129,7 +183,7 @@
       justify-content: flex-start;
       align-items: center;
       .box {
-        background: #00cc81;
+        background: #1e4df5;
         width: 4px;
         height: 16px;
       }
@@ -218,9 +272,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 9px 0;
+      padding-bottom: 28px;
       .box {
-        background: #00cd82;
+        background: #1e4df5;
         width: 10px;
         height: 10px;
         border-radius: 100%;
@@ -228,17 +282,60 @@
       .text {
         margin-left: 3%;
         font-size: 12px;
-        color: #00cc81;
+        color: #1e4df5;
         letter-spacing: 0;
         text-align: center;
       }
     }
+    .newRuleContent{
+      margin: 0 auto;
+      width: (267/324*100%);
+      padding: 10px 0 25px 0;
+      .prize{
+        font-size:11px;
+        color:#ec4946;
+        text-align:center;
+      }
+      .prizeTip{
+        font-size:11px;
+        color:#999999;
+        text-align:left;
+      }
+    }
     footer {
-      font-size: 10px;
-      color: #666666;
+      font-size:14px;
+      color:#515151;
       letter-spacing: 0;
       text-align: center;
-      padding-bottom: 13px;
+      padding-bottom: 6px;
+    }
+    .newRuleTable{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li{
+        width: 50%;
+        margin-left: 33px;
+        div{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .money{
+            margin-left: 15px;
+          }
+          p{
+            font-size:14px;
+            color:#515151;
+            span{
+              font-size:14px;
+              color:#1e4df5;
+            }
+          }
+        }
+      }
+      li:last-child{
+        margin-left: 0;
+      }
     }
   }
 </style>

@@ -25,7 +25,7 @@
     },
     methods: {
       downloadApp() {
-        console.log("mlink")
+        console.log("mlink");
 //        window.location.href = downloadURL;
       }
     }
@@ -38,7 +38,7 @@
   .footer {
     position: fixed;
     bottom: 0;
-    background: #292d5a;
+    background: #1e4df5;
     box-shadow: 0 -2px 16px 0 rgba(0, 0, 0, 0.20);
     width: 100%;
     height: 68px;

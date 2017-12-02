@@ -36,11 +36,11 @@
     return null;
   };
 //  const userId = sessionStorage.getItem("userId");
-  const roomId = sessionStorage.getItem("roomId");
-  const counterworkId = sessionStorage.getItem("counterworkId");
-  const pass = sessionStorage.getItem("pass");
-  const code = sessionStorage.getItem("code");
-  const invitedUserId = sessionStorage.getItem("invitedUserId");
+  let roomId = GetQueryString('room_id');
+  let counterworkId = GetQueryString('counterwork_id');
+  let pass = GetQueryString('pass');
+  let code = GetQueryString('code');
+  let invitedUserId = GetQueryString('invited_user_id');
 
   new Mlink({
     mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId,//短链地址
@@ -53,6 +53,12 @@
   let signature = sessionStorage.getItem("signature");
   let imgUrl = 'http://www.idothing.com/wxAct/images/logo_footer.png';
   let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId;
+
+//  function abc() {
+//    alert(mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId);
+//    alert(jumpLink)
+//  }
+//  abc();
   $(function () {
     wx.config({
       appId: appId,

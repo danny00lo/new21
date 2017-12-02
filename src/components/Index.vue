@@ -2,8 +2,9 @@
   <div class="index">
     <Top></Top>
     <Rule></Rule>
+    <Details></Details>
     <Process></Process>
-    <Explain></Explain>
+    <!--<Explain></Explain>-->
     <Download></Download>
   </div>
 </template>
@@ -14,6 +15,7 @@
   import Rule from './Rule.vue'
   import Process from './Process.vue'
   import Top from './Top.vue'
+  import Details from './Details.vue'
 
   export default {
     name: 'Index',
@@ -27,7 +29,8 @@
       Explain,
       Rule,
       Process,
-      Top
+      Top,
+      Details
     }
   }
 </script>

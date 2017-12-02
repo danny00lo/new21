@@ -71,10 +71,10 @@
 <style lang="scss" scoped="">
   .explain {
     background: #ffffff;
-    box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);
-    border-radius: 8px;
+    /*box-shadow: 0 2px 16px 0 rgba(5, 0, 30, 0.16);*/
+    /*border-radius: 8px;*/
     margin: 0 auto;
-    width: (341/375*100%);
+    width: (324/375*100%);
     position: relative;
     .top{
       padding:19px 0 25px 0;
