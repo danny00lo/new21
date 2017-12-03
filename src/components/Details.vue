@@ -105,7 +105,8 @@
         text-align:left;
         span{
           font-size:12px;
-          color: red;
+          font-weight: 700;
+          color: #4a4a4a;
         }
       }
       p:last-child{
@@ -116,7 +117,6 @@
       .boxTitle{
         background:#1e4df5;
         width:(267/324*100%);
-        margin-left: 15px;
         height:24px;
         line-height: 24px;
         p{
@@ -128,8 +128,7 @@
       }
       .boxTitle2{
         background:#1e4df5;
-        width:(285/324*100%);
-        margin-left: 15px;
+        width:(300/324*100%);
         height:24px;
         line-height: 24px;
         p{
@@ -142,7 +141,6 @@
       .boxTitle3{
         background:#1e4df5;
         width:(255/324*100%);
-        margin-left: 15px;
         height:24px;
         line-height: 24px;
         p{

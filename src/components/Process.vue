@@ -44,6 +44,9 @@
         <p class="content">{{process.content3}}</p>
       </div>
     </div>
+    <div class="last">
+      最终解释权归种子习惯所有
+    </div>
   </div>
 </template>
 
@@ -230,7 +233,7 @@
         position: absolute;
         background: url(../assets/img/convert.png)no-repeat;
         background-size: 100% 100%;
-        width: (145/375*100%);
+        width: (165/375*100%);
         height: 58px;
         left: (201/375*100%);
         top: 40px;
@@ -307,6 +310,13 @@
           margin-left: 17px;
         }
       }
+    }
+    .last{
+      margin-left: 17px;
+      padding-bottom: 22px;
+      font-size:10px;
+      color:#888585;
+      text-align:left;
     }
   }
 </style>

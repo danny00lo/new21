@@ -42,6 +42,7 @@
     box-shadow: 0 -2px 16px 0 rgba(0, 0, 0, 0.20);
     width: 100%;
     height: 68px;
+    z-index: 1000;
     .father {
       display: flex;
       justify-content: center;

@@ -4,6 +4,7 @@
       <!--<div class="box"></div>-->
       <!--<div class="content">玩法简介</div>-->
     <!--</div>-->
+    <div style="height: 10px"></div>
     <div class="title2">
       <p>
         玩法简介
@@ -12,7 +13,7 @@
     <ul class="topContent">
       <li>
         <div class="photo">
-          <img src="../assets/img/top_2.png" alt="">
+          <img src="../assets/img/top_1.png" alt="">
         </div>
         <div class="contentFather">
           <div class="title">{{msg1.title}}</div>
@@ -47,7 +48,7 @@
         </div>
       </li>
       <li>
-        <div class="photo">
+        <div class="photo" style="margin-left: 16px;margin-right: 16px">
           <img src="../assets/img/top_5.png" alt="">
         </div>
         <div class="contentFather">
@@ -103,7 +104,9 @@
   .top {
     background: #fff;
     width: (324/375*100%);
-    margin: 0 auto;
+    margin: -145px auto 0 auto;
+    position: relative;
+    z-index: 100;
     .title2{
       background: #ffd207;
       width: (126/324*100%);
@@ -172,13 +175,14 @@
           letter-spacing: -0.48px;
         }
         .content {
-          font-size: 10px;
+          font-size: 12px;
           color:#515151;
           letter-spacing: -0.34px;
         }
       }
       .photo{
-        margin: 0 12px;
+        margin: 0 20px 0 12px;
+        width: 46px;
         text-align: center;
         img{
           width: 50%;

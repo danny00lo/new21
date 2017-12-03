@@ -1,5 +1,8 @@
 <template>
   <div class="index">
+    <div class="background">
+      <img src="../assets/img/background_index.png" alt="">
+    </div>
     <Top></Top>
     <Rule></Rule>
     <Details></Details>
@@ -37,6 +40,13 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped="">
+  .background{
+    position: relative;
+    z-index: 1;
+    img{
+      width: 100%;
+    }
+  }
   .index{
     padding-bottom: 68px;
   }

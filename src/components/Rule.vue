@@ -12,30 +12,30 @@
     <ul class="newRuleTable">
       <li>
         <div>
-          <p>第<span>1</span>名</p>
-          <p class="money">5000</p>
+          <p>第1名</p>
+          <p class="money">5000元</p>
         </div>
         <div>
-          <p>第<span>2</span>名</p>
-          <p class="money">3000</p>
+          <p>第2名</p>
+          <p class="money">3000元</p>
         </div>
         <div>
-          <p>第<span>3</span>名</p>
-          <p class="money">2000</p>
+          <p>第3名</p>
+          <p class="money">2000元</p>
         </div>
       </li>
       <li>
         <div>
-          <p>第<span>04-10</span>名</p>
-          <p class="money">800</p>
+          <p>第04-10名</p>
+          <p class="money">800元</p>
         </div>
         <div>
-          <p>第<span>11-20</span>名</p>
-          <p class="money">300</p>
+          <p>第11-20名</p>
+          <p class="money">300元</p>
         </div>
         <div>
-          <p>第<span>21-40</span>名</p>
-          <p class="money">240</p>
+          <p>第21-40名</p>
+          <p class="money">240元</p>
         </div>
       </li>
     </ul>
@@ -60,13 +60,16 @@
         <!--</ul>-->
       <!--</div>-->
     <!--</div>-->
-    <footer>
-      {{footer}}
-    </footer>
-    <div class="act" v-if="show == true">
-      <div class="box"></div>
-      <p class="text">{{activity}}</p>
+    <div class="fatherForFooter">
+      <footer>
+        {{footer}}
+      </footer>
+      <div class="act" v-if="show == true">
+        <div class="box"></div>
+        <p class="text">{{activity}}</p>
+      </div>
     </div>
+    <div style="height: 28px"></div>
   </div>
 </template>
 
@@ -272,7 +275,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 28px;
       .box {
         background: #1e4df5;
         width: 10px;
@@ -293,21 +295,29 @@
       padding: 10px 0 25px 0;
       .prize{
         font-size:11px;
-        color:#ec4946;
+        color:#515151;
+        width: 110%;
+        margin-left: -5%;
+        font-weight: 400;
         text-align:center;
       }
       .prizeTip{
         font-size:11px;
         color:#999999;
-        text-align:left;
+        text-align:center;
       }
     }
-    footer {
-      font-size:14px;
-      color:#515151;
-      letter-spacing: 0;
-      text-align: center;
-      padding-bottom: 6px;
+    .fatherForFooter{
+      margin: 0 15px;
+      padding: 10px 0;
+      border:2px solid #1e4df5;
+      footer {
+        font-size:14px;
+        color:#1e4df5;
+        letter-spacing: 0;
+        text-align: center;
+        padding-bottom: 6px;
+      }
     }
     .newRuleTable{
       display: flex;

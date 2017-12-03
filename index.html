@@ -19,7 +19,7 @@
       bottom: 0;
       width: 100%;
       height: 68px;
-      z-index: 100;
+      z-index: 10000;
     }
   </style>
 </head>
@@ -35,15 +35,16 @@
     if (r != null) return unescape(r[2]);
     return null;
   };
-//  const userId = sessionStorage.getItem("userId");
+  //  const userId = sessionStorage.getItem("userId");
   let roomId = GetQueryString('room_id');
   let counterworkId = GetQueryString('counterwork_id');
   let pass = GetQueryString('pass');
   let code = GetQueryString('code');
   let invitedUserId = GetQueryString('invited_user_id');
+  let mwCK = GetQueryString('mw_ck');
 
   new Mlink({
-    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId,//短链地址
+    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&mw_ck=' + mwCK,//短链地址
     button: document.querySelector('a#btnOpenApp')
   });
 
@@ -51,14 +52,14 @@
   let timestamp = sessionStorage.getItem("timestamp");
   let nonceStr = sessionStorage.getItem("nonceStr");
   let signature = sessionStorage.getItem("signature");
-  let imgUrl = 'http://www.idothing.com/wxAct/images/logo_footer.png';
-  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId;
+  let imgUrl = 'http://www.idothing.com/wxAct/images/wxActLogo.png';
+  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&mw_ck=' + mwCK;
 
-//  function abc() {
-//    alert(mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId);
-//    alert(jumpLink)
-//  }
-//  abc();
+  //  function abc() {
+  //    alert(mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId);
+  //    alert(jumpLink)
+  //  }
+  //  abc();
   $(function () {
     wx.config({
       appId: appId,
@@ -71,21 +72,21 @@
     });
     wx.ready(function () {
       wx.onMenuShareTimeline({
-        title: '喂，明早一起“早起杀”吧……', // 分享标题
+        title: '据说这是一场睁开眼睛就能赢钱的比赛', // 分享标题
         link: jumpLink, // 分享链接
         imgUrl: imgUrl, // 分享图标
       });
       wx.onMenuShareAppMessage({
-        title: '21天早起团队对抗赛', // 分享标题
-        desc: '喂，明早一起“早起杀”吧……', // 分享描述
+        title: '那些早起的人正变得无比有钱…...', // 分享标题
+        desc: '据说是因为一场睁开眼睛就能赢钱的比赛', // 分享描述
         link: jumpLink, // 分享链接
         imgUrl: imgUrl, // 分享图标
         type: 'link', // 分享类型,music、video或link，不填默认为link
         dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       });
       wx.onMenuShareQQ({
-        title: '21天早起团队对抗赛', // 分享标题
-        desc: '喂，明早一起“早起杀”吧……', // 分享描述
+        title: '那些早起的人正变得无比有钱…...', // 分享标题
+        desc: '据说是因为一场睁开眼睛就能赢钱的比赛', // 分享描述
         link: jumpLink, // 分享链接
         imgUrl: imgUrl, // 分享图标
       });
