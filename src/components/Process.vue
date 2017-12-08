@@ -67,7 +67,7 @@
           title3:'03',
           content1:'下载种子习惯app报名',
           content2:'报名后进行组队',
-          content3:'12月18日正式开赛'
+          content3:'12月21日正式开赛'
         }
       }
     },

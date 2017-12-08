@@ -7,7 +7,7 @@
       <div class="mainText">
         前往种子习惯app参赛
       </div>
-      <div class="downLoad" v-on:click="downloadApp()">
+      <div class="downLoad" >
         点击前往
       </div>
     </div>
