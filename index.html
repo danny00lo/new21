@@ -41,10 +41,10 @@
   let pass = GetQueryString('pass');
   let code = GetQueryString('code');
   let invitedUserId = GetQueryString('invited_user_id');
-  let mwCK = GetQueryString('mw_ck');
+  let mwCK = GetQueryString('channel');
 
   new Mlink({
-    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&mw_ck=' + mwCK,//短链地址
+    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&channel=' + mwCK,//短链地址
     button: document.querySelector('a#btnOpenApp')
   });
 
@@ -53,7 +53,7 @@
   let nonceStr = sessionStorage.getItem("nonceStr");
   let signature = sessionStorage.getItem("signature");
   let imgUrl = 'http://www.idothing.com/wxAct/images/wxActLogo.png';
-  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&mw_ck=' + mwCK;
+  let jumpLink = 'http://www.idothing.com/wxAct/index.php' + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&channel=' + mwCK;
 
   //  function abc() {
   //    alert(mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id='+invitedUserId);
