@@ -44,7 +44,7 @@
   let mwCK = GetQueryString('channel');
 
   new Mlink({
-    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&channel=' + mwCK,//短链地址
+    mlink: mlink + '?room_id=' + roomId + '&counterwork_id=' + counterworkId + '&pass=' + pass + '&code=' + code + '&invited_user_id=' + invitedUserId + '&channel=' + mwCK +'&mw_ck='+mwCK,//短链地址
     button: document.querySelector('a#btnOpenApp')
   });
 
